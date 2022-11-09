@@ -81,3 +81,8 @@ variable "settings" {
   default     = {}
   description = "Additional settings which will be passed to the Helm chart values, see https://github.com/kubernetes-sigs/aws-efs-csi-driver."
 }
+
+variable "tags" {
+  type        = map(any)
+  description = "A map of tags to add to all resources."
+}
