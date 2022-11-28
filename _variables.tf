@@ -86,3 +86,9 @@ variable "tags" {
   type        = map(any)
   description = "A map of tags to add to all resources."
 }
+
+variable "replica_count" {
+  type        = number
+  default     = 2
+  description = "Amazon EFS CSI Driver number of replicas."
+}

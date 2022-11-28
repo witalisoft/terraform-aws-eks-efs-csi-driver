@@ -18,6 +18,11 @@ resource "helm_release" "kubernetes_efs_csi_driver" {
   }
 
   set {
+    name  = "replicaCount"
+    value = var.replica_count
+  }
+
+  set {
     name  = "controller.serviceAccount.annotations.eks\\.amazonaws\\.com/role-arn"
     value = aws_iam_role.efs_csi_driver[0].arn
   }
